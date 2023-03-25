@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="scroll_evert3_.css">
+</head>
+
+<body>
+    <header>
+        <h1>HELLO</h1>
+        <ul>
+            <nav><a href="#"></a>A</nav>
+            <nav><a href="#"></a>B</nav>
+            <nav><a href="#"></a>C</nav>
+        </ul>
+    </header>
+    <div class="content">
+        <img src="scroll_image.jpeg">
+        <h3>첫번째 사진</h3>
+    </div>
+
+    <div class="text">
+        <h3>수면(睡眠)이란</h3>
+        <P>잠(영어: Sleep) 또는 수면(睡眠)은 동물이 일정 시간 동안 몸과 마음의 활동을 쉬면서 <br>
+            의식이 없는 상태로 있는 것이다.<br>
+            의식은 없거나 줄어들고, 감각 기관이 상대적으로 활동을 중단하며, 거의 모든 수의근의 움직임이 <br>
+            없는 것이 특징이다.<br>
+            자극에 대한 반응이 줄어드는 것으로 각성과 구별되며, 쉽게 의식을 되돌릴 수 있다는 점에서 겨울잠이나 <br>
+            혼수상태와는 구별된다.<br>
+
+        </P>
+    </div>
+
+    <div class="text2">
+        <h3>수면의 기능</h3>
+        <P>
+            1.신체활동의 중지를 통한 피로 해소<br>
+            2.뇌 속의 노폐물 제거<br>
+            3.경험 및 감정 등의 외부 정보 정리<br>
+            4.신체의 회복 및 고통 완화
+        </P>
+    </div>
+
+    <div class="content2">
+        <img src="scroll_image2.jpeg">
+        <h3>두번째 사진</h3>
+    </div>
+    <div class="content3">
+        <img src="scroll_image3.jpeg">
+        <h3>세번째 사진</h3>
+    </div>
+
+    <div class="text3">
+        <h3>숙면 방법</h3>
+        <P>숙면을 위한 핵심은 매일 일정한 시간에 일어나는 것이다.<br>
+            일정한 시간에 잠자리에 들고 일정한 시간에 깰 경우에 뇌의 수면중추가 안정되어 깊은 잠(=질이 높은 잠)을<br>
+            자게 된다고 한다.<br>
+            불규칙적으로 잠을 자면 건강에 안 좋다. 평균적으로 권장 수면 시간은 완전히 뇌가 잠들어서, 수면 뇌파를 <br>
+            발생시키는 시간을<br>
+            기준으로 7~9시간이다. 학생이나 사무직 종사자라면 최소 6시간, 육체적 활동이 많은 사람은 8시간 정도는 자야<br>
+            피로가 누적되지 않는다.<br>
+            따라서 초조함이나 긴장감, 스트레스 등으로 바로 잠들기 힘든 심리적 상황이거나 중간에 깨거나 하는 기타 상황 <br>
+            등을 감안했을 때 수면 시간으로 최소한 8~10시간을 확보하는 것이 적절하다.
+        </P>
+    </div>
+
+    <script>
+        // HTML 요소 선택하기
+        const element = document.querySelector('.content');
+
+        // 스크롤 이벤트 처리하기
+        window.addEventListener('scroll', function () {
+            // 요소의 위치와 크기 구하기
+            const rect = element.getBoundingClientRect();
+
+            // 요소가 화면 안에 있을 때
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                // 요소를 서서히 나타나게 하기
+                element.style.opacity = 1;
+                element.style.transform = 'translateX(0)';
+            } else {
+                // 요소를 서서히 사라지게 하기
+                element.style.opacity = 0;
+                element.style.transform = 'translateX(-100%)';
+            }
+        });
+
+        const element2 = document.querySelector('.content2');
+
+        // 스크롤 이벤트 처리하기
+        window.addEventListener('scroll', function () {
+            // 요소의 위치와 크기 구하기
+            const rect = element2.getBoundingClientRect();
+
+            // 요소가 화면 안에 있을 때
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                // 요소를 서서히 나타나게 하기
+                element2.style.opacity = 1;
+                element2.style.transform = 'translateX(0)';
+            } else {
+                // 요소를 서서히 사라지게 하기
+                element2.style.opacity = 0;
+                element2.style.transform = 'translateX(100%)';
+            }
+        });
+
+        const element3 = document.querySelector('.content3');
+
+        // 스크롤 이벤트 처리하기
+        window.addEventListener('scroll', function () {
+            // 요소의 위치와 크기 구하기
+            const rect = element3.getBoundingClientRect();
+
+            // 요소가 화면 안에 있을 때
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                // 요소를 서서히 나타나게 하기
+                element3.style.opacity = 1;
+                element3.style.transform = 'translateX(0)';
+            } else {
+                // 요소를 서서히 사라지게 하기
+                element3.style.opacity = 0;
+                element3.style.transform = 'translateX(-100%)';
+            }
+        });
+
+        const element4 = document.querySelector('.text');
+
+        // 스크롤 이벤트 처리하기
+        window.addEventListener('scroll', function () {
+            // 요소의 위치와 크기 구하기
+            const rect = element4.getBoundingClientRect();
+
+            // 요소가 화면 안에 있을 때
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                // 요소를 서서히 나타나게 하기
+                element4.style.opacity = 1;
+                element4.style.transform = 'translateX(0)';
+            } else {
+                // 요소를 서서히 사라지게 하기
+                element4.style.opacity = 0;
+                element4.style.transform = 'translateX(-100%)';
+            }
+        });
+
+        const element5 = document.querySelector('.text2');
+
+        // 스크롤 이벤트 처리하기
+        window.addEventListener('scroll', function () {
+            // 요소의 위치와 크기 구하기
+            const rect = element5.getBoundingClientRect();
+
+            // 요소가 화면 안에 있을 때
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                // 요소를 서서히 나타나게 하기
+                element5.style.opacity = 1;
+                element5.style.transform = 'translateX(0)';
+            } else {
+                // 요소를 서서히 사라지게 하기
+                element5.style.opacity = 0;
+                element5.style.transform = 'translateX(100%)';
+            }
+        });
+
+        const element6 = document.querySelector('.text3');
+
+        // 스크롤 이벤트 처리하기
+        window.addEventListener('scroll', function () {
+            // 요소의 위치와 크기 구하기
+            const rect = element6.getBoundingClientRect();
+
+            // 요소가 화면 안에 있을 때
+            if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                // 요소를 서서히 나타나게 하기
+                element6.style.opacity = 1;
+                element6.style.transform = 'translateX(0)';
+            } else {
+                // 요소를 서서히 사라지게 하기
+                element6.style.opacity = 0;
+                element6.style.transform = 'translateX(-100%)';
+            }
+        });
+
+    </script>
+</body>
+
+</html>
